@@ -4,6 +4,8 @@ Exercise proposed on a Distributed systems class. Given an integral, it's interv
 This program was coded in two ways: Using C and Sockets and using MPI (message passing interface).
 Both work the same way and are stand-alone versions. You can find the complete program and instructions in their respective folders.
 
+The codes are in portuguese (PTBR) and probably won't get an english version
+
 ## Method
 Each client will calculate the area of a given trapezium and send it back to the server, where the final result will be calculated.
 

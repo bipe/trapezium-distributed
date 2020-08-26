@@ -15,6 +15,6 @@ The given info is:
 - f(x) = sqrt(100²-x²), on the [0, 100] interval.
 - Number of clients: 1, 2, 4 or 10
 
-# MPI made with libmpich-dev (more details inside the mpi folder)
-# C version MUST be compiled with gcc-7 (more details inside the c folder)
+## MPI made with libmpich-dev (more details inside the mpi folder)
+## C version MUST be compiled with gcc-7 (more details inside the c folder)
 

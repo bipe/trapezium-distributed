@@ -6,6 +6,11 @@ Both work the same way and are stand-alone versions. You can find the complete p
 
 The codes are in portuguese (PTBR) and probably won't get an english version
 
+### Português:
+Sistema distribuído para calcular integral em forma cliente-servidor usando método dos trapézios. Dada a integral, intervalo e número de clients, calcula a área da integral aproximada. Quanto mais clients, mais preciso será o resultado (roda apenas com 1, 2, 4 ou 10 clients). 
+Implementado usando Sockets em C e usando MPI. Ambos funcionam da mesma forma e são versões independentes. Os programas e instruções estão em suas respectivas pastas.
+Os códigos estão em português :)
+
 ## Method
 Each client will calculate the area of a given trapezium and send it back to the server, where the final result will be calculated.
 

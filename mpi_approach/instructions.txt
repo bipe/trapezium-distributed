@@ -1,0 +1,53 @@
+### Usando mpich (recomendado - usado para fazer o trabalho)
+
+Requirements: gcc and g++
+$ sudo apt-get install gcc
+$ sudo apt-get install g++
+
+install mpich:
+$ sudo apt-get install libmpich-dev
+
+Compile:
+$ mpicc file.c -lm -o executable
+
+Execute:
+$ mpirun -n X ./executable Y
+
+Where X is number of nodes (clients + 1 server) (values must be 2, 3, 5 or 11)   
+And Y is the number of decimals of the result (4, 5 or 6)
+
+
+
+
+### openMPI instructions:
+
+Same requirements:
+$ apt-get install gcc
+$ apt-get install g++
+
+Download the 'tar.gz' openmpi:
+https://www.open-mpi.org/software/ompi/v4.0/
+
+Setup:
+$ gunzip -c openmpi-4.0.4.tar.gz | tar xf -
+$ cd openmpi-4.0.4
+$ ./configure --prefix=/usr/local
+<...lots of output...>
+$ make all install
+$ sudo ldconfig
+
+Put the 'hostfile' on the same directory of the executable(this avoid problems with number of slots)
+'hostfile' file content must be:
+localhost slots=12
+
+Compile:
+$ mpicc file.c -lm -o executable
+
+Execute (you have to "call" the hostfile here to make it work properly):
+$ mpirun --hostfile hostfile -n X ./executable Y
+
+Where X is number of nodes (clients + 1 server) (values must be 2, 3, 5 or 11)   
+And Y is the number of decimals of the result (4, 5 or 6)
+
+
+
